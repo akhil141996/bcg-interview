@@ -18,7 +18,7 @@ router.build(app);
 app.listen(8080, async () => {
     setTimeout(async () => {
         await bootstrap({ knex })
-    }, 10000)
+    }, process.env.TIMEOUT)
     console.log('Listening on port 8080')
 })
 
