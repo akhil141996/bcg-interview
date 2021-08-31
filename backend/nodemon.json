@@ -1,0 +1,11 @@
+{
+  "watch": [
+    "src"
+  ],
+  "exec": "node ./src/index.js",
+  "legacyWatch": true,
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules"
+  ]
+}
