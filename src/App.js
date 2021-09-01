@@ -1,11 +1,18 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Analytics from './Analytics';
+import LottieLoader from './components/PageLoader';
+import HomePage from './pages/HomePage';
 
 function App() {
+  const [isLoaded, setLoaded] = React.useState(false);
+  React.useEffect(() => {
+    setTimeout(() => setLoaded({ isLoaded: true }), 1000)
+  })
   return (
     <div className="App">
-      <Analytics />
+      {
+        !isLoaded ? <LottieLoader /> : <HomePage />
+      }
     </div>
   );
 }

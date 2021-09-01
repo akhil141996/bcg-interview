@@ -17,10 +17,10 @@ module.exports = {
         }
     },
     savePolicyDetailsById: async (policyData) => {
-        return true
+        return await knex('policy_details').where('policy_id', '=', policyData.policy_id).update(policyData)
     },
     saveCustomerDetailsById: async (customerData) => {
-        return true
+        return await knex('customer_details').where('customer_id', '=', customerData.customer_id).update(customerData)
     },
     fetchPolicyData: async () => {
         try {

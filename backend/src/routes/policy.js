@@ -5,8 +5,8 @@ const Joi = require('joi');
 const utility = require('../utils/utility');
 
 const schema = Joi.object({
-    policy: Joi.string().required(),
-    customer: Joi.string().required(),
+    policy: Joi.any().required(),
+    customer: Joi.any().required(),
 })
 
 router.get('/search/:id', async (req, res) => {
