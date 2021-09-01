@@ -4,11 +4,13 @@ const router = new Router()
 const Joi = require('joi');
 const utility = require('../utils/utility');
 
+// Joi validations for the save object
 const schema = Joi.object({
     policy: Joi.any().required(),
     customer: Joi.any().required(),
 })
 
+// search policy data by policy id
 router.get('/search/:id', async (req, res) => {
     try {
         const details = await api.searchPolicyWithPolicyId(req.params.id)
@@ -19,6 +21,7 @@ router.get('/search/:id', async (req, res) => {
     }
 })
 
+// save the policy data
 router.post('/save', async (req, res) => {
     try {
         const { error } = schema.validate(req.body);
@@ -35,6 +38,7 @@ router.post('/save', async (req, res) => {
     }
 })
 
+// fetch the analytics data of the policies
 router.get('/policiesCount', async (req, res) => {
     try {
         const result = await api.fetchPolicyData();

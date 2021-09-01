@@ -1,6 +1,7 @@
 import Lottie from "lottie-react";
 import animationData from '../assets/lottie/64114-scooter-with-side-car.json'
 
+// Loader for the pages using lottie animations
 export default function LottieLoader() {
     return (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>

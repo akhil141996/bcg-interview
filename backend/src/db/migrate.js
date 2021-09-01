@@ -3,6 +3,7 @@ const csv = require('csvtojson')
 module.exports = {
     async migrateData({ knex }) {
         try {
+            // Migration of the csv data.
             let customers_len = await knex.raw('SELECT COUNT(customer_id) FROM customer_details');
             let policies_len = await knex.raw('SELECT COUNT(policy_id) FROM policy_details');
             if (!customers_len[0][0]['COUNT(customer_id)'] && !policies_len[0][0]['COUNT(policy_id)']) {

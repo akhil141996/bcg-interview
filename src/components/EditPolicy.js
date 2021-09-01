@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { toast } from 'react-toastify';
 
+// Edit policy details component to edit the detials of the policy.
+
 function EditPolicyDetails(props) {
     const {
         bodily_injury_liability,
@@ -43,6 +45,7 @@ function EditPolicyDetails(props) {
     const [maritalStatus, setMaritalStatus] = useState(marital_status)
     const [isInvalid, setPremiumInvalid] = useState(false)
 
+    // Save the policy details if they are valid
     const savePolicy = async (event) => {
         event.preventDefault();
         if (!isInvalid) {

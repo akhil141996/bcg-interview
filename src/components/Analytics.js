@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { PureComponent } from 'react';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, BarChart, Bar, Legend } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import LottieLoader from './PageLoader';
-
+// Analytics component to view the count of polices per month.
+// Filter by month to view the data as per region
 export default class Analytics extends PureComponent {
     constructor() {
         super()

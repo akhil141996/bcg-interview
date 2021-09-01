@@ -14,9 +14,10 @@ app.use(cors())
 // Add The Routes
 router.build(app);
 
-
+// Express app listening on port 8080
 app.listen(8080, async () => {
     setTimeout(async () => {
+        // Run the migrations to load the data from the csv file.
         await bootstrap({ knex })
     }, process.env.TIMEOUT)
     console.log('Listening on port 8080')

@@ -1,6 +1,7 @@
 const constants = require("./constants")
 
 module.exports = {
+    // Create the groupedData for analytics
     groupData: (data) => {
         try {
             const obj = {

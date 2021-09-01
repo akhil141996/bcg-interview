@@ -3,6 +3,7 @@ import React from "react";
 import EditPolicyDetails from "../components/EditPolicy";
 import { toast } from 'react-toastify';
 
+// Home page component to search for policy id or customer id
 class HomePage extends React.Component {
     constructor() {
         super()
@@ -15,6 +16,7 @@ class HomePage extends React.Component {
         }
     }
 
+    // fetch policy details by id
     fetchPolicyDetailsById = async () => {
         const id = this.state.customerId || this.state.policyId;
         this.setState({

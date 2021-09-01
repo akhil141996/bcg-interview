@@ -1,5 +1,5 @@
 const fs = require('fs');
-
+// create routes based on the file name and join them to internal routes.
 const Router = {
     build(app) {
         const routes = fs
