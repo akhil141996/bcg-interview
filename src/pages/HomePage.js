@@ -46,6 +46,19 @@ class HomePage extends React.Component {
                     progress: undefined,
                 });
             }
+        } else {
+            this.setState({
+                isLoaded: true
+            })
+            toast.error('Please enter Policy / Customer ID to search', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         }
     }
 
