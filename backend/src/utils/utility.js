@@ -54,13 +54,6 @@ module.exports = {
                     West: 0,
                     All: 0
                 },
-                0: {
-                    North: 0,
-                    South: 0,
-                    East: 0,
-                    West: 0,
-                    All: 0
-                },
                 7: {
                     North: 0,
                     South: 0,
